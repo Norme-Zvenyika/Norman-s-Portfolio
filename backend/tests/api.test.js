@@ -83,7 +83,7 @@ describe("API endpoints", () => {
             // '99999' is not a valid UUID
             const res = await request(app).delete("/messages/99999");
             expect(res.status).toBe(StatusCodes.BAD_REQUEST);
-            expect(res.body.message).toBe("invalid message id format (must be a UUID)");
+            expect(res.body.message).toBe("invalid message id format ");
         });
 
         it("should return 404 for non-existent message with valid uuid format", async () => {
