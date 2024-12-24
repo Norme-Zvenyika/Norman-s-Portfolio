@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import "dotenv/config";
 import { errorHandler } from "./src/middleware/error.middleware.js";
-// import messageRoutes from "./src/routes/message.routes.js";
+import messageRoutes from "./src/routes/message.routes.js";
 
 // create express app
 const createApp = () => {
@@ -13,8 +13,8 @@ const createApp = () => {
 	app.use(express.json());
 	app.use(express.urlencoded({ extended: true }));
 
-	// // routes
-	// app.use("/api/messages", messageRoutes);
+	// routes
+	app.use("/messages", messageRoutes);
 
 	// health check
 	app.get("/health", (req, res) => {
