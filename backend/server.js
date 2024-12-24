@@ -18,16 +18,16 @@ const createApp = () => {
 	// create different rate limiters for different purposes
 	const apiLimiter = rateLimit({
 		windowMs: 15 * 60 * 1000, // 15 minutes
-		max: 5, // limit each IP to 5 requests per window
+		max: 3, // limit each IP to 5 requests per window
 		message: "Too many API requests, please try again later."
 	});
 
 	const messageLimiter = rateLimit({
 		windowMs: 60 * 60 * 1000, // 1 hour
-		max: 3, // limit each IP to 3 messages per hour
+		max: 2, // limit each IP to 3 messages per hour
 		message: {
 			status: 'error',
-			message: "Too many messages sent. Please wait before sending more messages."
+			message: "Too many messages requested. Please wait before requesting more messages."
 		}
 	});
 
