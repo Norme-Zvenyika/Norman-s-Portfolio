@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, afterAll } from "vitest";
 import { createApp } from "../server.js";
 import { db, closeConnection } from "../config/db.config.js";
+import { messageModel } from "../src/models/message.model.js";
 
 /**
  * database tests
@@ -33,5 +34,47 @@ describe("database", () => {
             );
         `;
         expect(result[0].exists).toBe(true);
+    });
+
+    describe("message operations", () => {
+        let testMessageId;
+
+        const testMessage = {
+            name: "Test User",
+            email: "test@example.com",
+            message: "This is a test message"
+        };
+
+        // test message creation
+        it("should create a new message", async () => {
+            const message = await messageModel.createMessage(
+                testMessage.name,
+                testMessage.email,
+                testMessage.message
+            );
+            testMessageId = message.id;
+
+            expect(message).toMatchObject({
+                name: testMessage.name,
+                email: testMessage.email,
+                message: testMessage.message
+            });
+            expect(message.id).toBeDefined();
+            expect(message.created_at).toBeDefined();
+        });
+
+        // test getting all messages
+        it("should get all messages", async () => {
+            const messages = await messageModel.getAllMessages();
+            expect(Array.isArray(messages)).toBe(true);
+            expect(messages.length).toBeGreaterThan(0);
+        });
+
+        // test message deletion
+        it("should delete a message", async () => {
+            const deletedMessage = await messageModel.deleteMessage(testMessageId);
+            expect(deletedMessage.id).toBe(testMessageId);
+            testMessageId = null; // reset since we deleted it
+        });
     });
 });
