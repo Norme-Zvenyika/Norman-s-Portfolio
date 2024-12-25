@@ -35,7 +35,7 @@ const DesktopSidebar = ({ sections }: Props) => {
           }
         }}>
           <img 
-            src="/profile.jpg" 
+            src="/images/norman_head_shot.jpg" 
             alt="Profile"
             style={{
               maxWidth: '10rem',
