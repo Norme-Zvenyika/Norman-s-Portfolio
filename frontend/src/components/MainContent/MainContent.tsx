@@ -8,7 +8,7 @@ const MainContent = () => {
     <Box sx={{ 
       width: {
         xs: '100%',
-        md: 'calc(100% - 240px)'
+        md: 'calc(100% - 240px)' // account for sidebar width on desktop
       },
       marginLeft: {
         xs: 0,
@@ -23,11 +23,13 @@ const MainContent = () => {
             alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: '#fafafa',
-            padding: 3,
-            borderBottom: index !== sections.length - 1 ? '1px solid #e0e0e0' : 'none'
+            padding: 3
           }}>
             {title} Section
           </Box>
+          {index !== sections.length - 1 && (
+            <Divider />
+          )}
         </Box>
       ))}
     </Box>
