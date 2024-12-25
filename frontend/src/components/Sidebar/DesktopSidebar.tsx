@@ -1,5 +1,6 @@
-import { Box, List, ListItem, ListItemText } from '@mui/material'
+import { Box } from '@mui/material'
 import { Section } from '../../types/section'
+import { Navigation } from '../Navigation/Navigation'
 
 interface Props {
   sections: Section[]
@@ -16,7 +17,8 @@ const DesktopSidebar = ({ sections }: Props) => {
       backgroundColor: 'primary.main',
       display: 'flex',
       flexDirection: 'column',
-      p: 3
+      p: 3,
+      boxShadow: 3
     }}>
       <Box sx={{ 
         display: 'flex',
@@ -25,7 +27,13 @@ const DesktopSidebar = ({ sections }: Props) => {
         justifyContent: 'center',
         flex: 1 
       }}>
-        <Box sx={{ mb: 4 }}>
+        <Box sx={{ 
+          mb: 4,
+          transition: 'transform 0.3s ease',
+          '&:hover': {
+            transform: 'scale(1.05)'
+          }
+        }}>
           <img 
             src="/profile.jpg" 
             alt="Profile"
@@ -38,29 +46,7 @@ const DesktopSidebar = ({ sections }: Props) => {
           />
         </Box>
         
-        <List sx={{ 
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center'
-        }}>
-          {sections.map(({ id, title }) => (
-            <ListItem 
-              key={id} 
-              sx={{ 
-                textAlign: 'center',
-                color: 'common.white',
-                '& .MuiTypography-root': {
-                  fontWeight: 800,
-                  letterSpacing: '0.05rem',
-                  textTransform: 'uppercase'
-                }
-              }}
-            >
-              <ListItemText primary={title} />
-            </ListItem>
-          ))}
-        </List>
+        <Navigation sections={sections} />
       </Box>
     </Box>
   )

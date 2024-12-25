@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { AppBar, Toolbar, IconButton, Box, Typography, Collapse } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 import { Section } from '../../types/section'
+import { Navigation } from '../Navigation/Navigation'
 
 interface Props {
   sections: Section[]
@@ -9,6 +11,24 @@ interface Props {
 
 const MobileSidebar = ({ sections }: Props) => {
   const [isExpanded, setIsExpanded] = useState(false)
+
+  useEffect(() => {
+    const handleCloseNav = () => setIsExpanded(false)
+    window.addEventListener('closeNav', handleCloseNav)
+    return () => window.removeEventListener('closeNav', handleCloseNav)
+  }, [])
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isExpanded) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isExpanded])
 
   return (
     <AppBar 
@@ -31,8 +51,14 @@ const MobileSidebar = ({ sections }: Props) => {
         <IconButton
           color="inherit"
           onClick={() => setIsExpanded(!isExpanded)}
+          sx={{
+            transition: 'transform 0.2s ease',
+            '&:active': {
+              transform: 'scale(0.9)'
+            }
+          }}
         >
-          <MenuIcon />
+          {isExpanded ? <CloseIcon /> : <MenuIcon />}
         </IconButton>
       </Toolbar>
 
@@ -43,21 +69,7 @@ const MobileSidebar = ({ sections }: Props) => {
           alignItems: 'center',
           py: 2
         }}>
-          {sections.map(({ id, title }) => (
-            <Box 
-              key={id}
-              sx={{
-                color: 'common.white',
-                textTransform: 'uppercase',
-                fontWeight: 800,
-                letterSpacing: '0.05rem',
-                py: 1,
-                cursor: 'pointer'
-              }}
-            >
-              {title}
-            </Box>
-          ))}
+          <Navigation sections={sections} isMobile={true} />
         </Box>
       </Collapse>
     </AppBar>
