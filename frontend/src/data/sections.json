@@ -1,0 +1,39 @@
+{
+	"sections": [
+		{
+			"id": "about",
+			"title": "About",
+			"order": 1
+		},
+		{
+			"id": "education",
+			"title": "Education",
+			"order": 2
+		},
+		{
+			"id": "experience",
+			"title": "Experience",
+			"order": 3
+		},
+		{
+			"id": "skills",
+			"title": "Technical Skills",
+			"order": 4
+		},
+		{
+			"id": "projects",
+			"title": "Projects",
+			"order": 5
+		},
+		{
+			"id": "awards",
+			"title": "Awards",
+			"order": 6
+		},
+		{
+			"id": "contact",
+			"title": "Contact",
+			"order": 7
+		}
+	]
+}
