@@ -11,13 +11,15 @@ export const BaseSection = ({ id, children, ...props }: BaseSectionProps) => {
     <Box 
       id={id}
       sx={{ 
-        width: '100%', 
-        backgroundColor: '#fafafa',
+        maxWidth: {
+          md: '100%',
+          lg: '90%'     
+        },
         padding: {
           xs: 3,
-          sm: '32px 24px',
-          md: '48px 64px',
-          lg: '48px 80px'
+          sm: 3,
+          md: 3,
+          lg: 3
         },
         scrollMarginTop: {
           xs: '70px',
@@ -32,4 +34,4 @@ export const BaseSection = ({ id, children, ...props }: BaseSectionProps) => {
       {children}
     </Box>
   )
-}
+ }
