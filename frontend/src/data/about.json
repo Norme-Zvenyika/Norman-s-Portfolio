@@ -1,0 +1,25 @@
+{
+    "name": "Norman Zvenyika",
+    "bio": "I'm studying Computer Science and Bioengineering at Lehigh University, where my passion for machine learning, data engineering, and software engineering continues to grow. I thrive when unraveling complex problems and delving into the fascinating crossovers between technology, biology, and society.\n\nMy journey so far has been diverse - I've gained enriching experience as a software engineering intern, honed my pedagogical skills as a teaching assistant, and embraced leadership roles to spearhead social impact projects and health advancements.\n\nI am motivated by the belief that the right use of technology can significantly benefit society. Thus, I'm always keen to discover new opportunities to channel my skills for the greater good.\n\nI would love to connect with those interested in exchanging ideas, exploring collaborations, or simply discussing the transformative potential of technology!",
+    "location": {
+        "city": "Bethlehem, PA",
+        "country": "United States of America"
+    },
+    "email": "normanzvenyika7@gmail.com",
+    "links": [
+        {
+            "url": "https://github.com/Norme-Zvenyika",
+            "label": "GitHub",
+            "icon": "Github"
+        },
+        {
+            "url": "https://linkedin.com/in/norman-zvenyika",
+            "label": "LinkedIn",
+            "icon": "LinkedIn"
+        }
+    ],
+    "resume": {
+        "url": "/path/to/resume.pdf",
+        "label": "Download My Resume"
+    }
+}
