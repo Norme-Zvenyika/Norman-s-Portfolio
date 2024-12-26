@@ -1,20 +1,7 @@
-import { Box } from '@mui/material'
-import Sidebar from './components/Sidebar/Sidebar'
-import MainContent from './components/MainContent/MainContent'
+import AppLayout from './components/Layout/AppLayout'
 
 function App(): JSX.Element {
-  return (
-    <Box sx={{ 
-      display: 'flex',
-      flexDirection: {
-        xs: 'column',
-        md: 'row'     
-      }
-    }}>
-      <Sidebar />
-      <MainContent />
-    </Box>
-  )
+  return <AppLayout />
 }
 
-export default App
+export default App;
