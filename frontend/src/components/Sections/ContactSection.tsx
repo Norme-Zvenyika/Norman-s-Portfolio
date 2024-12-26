@@ -61,7 +61,10 @@ export default function ContactSection({ section, content}: ContactSectionProps)
         try {
             const response = await fetch('https://portfolio-backend-dh64.onrender.com/messages', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Origin': window.location.origin
+                },
                 body: JSON.stringify(formData),
             });
 
