@@ -24,3 +24,25 @@ export interface AboutContent {
         label: string
     }
 }
+
+export interface ContactContent {
+    message: string
+}
+
+export interface ContactFormData {
+    name: string;
+    email: string;
+    message: string;
+}
+
+export interface ContactFormErrors {
+    name?: string;
+    email?: string;
+    message?: string;
+}
+
+export interface SnackbarState {
+    open: boolean;
+    message: string;
+    severity: 'success' | 'error';
+}
