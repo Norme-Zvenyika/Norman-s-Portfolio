@@ -46,3 +46,21 @@ export interface SnackbarState {
     message: string;
     severity: 'success' | 'error';
 }
+
+interface Location {
+    city?: string;
+    state?: string;
+}
+
+export interface Experience {
+    company: string;
+    position: string;
+    startDate: string;
+    endDate: string;
+    location: Location;
+    responsibilities: string[];
+}
+
+export interface ExperienceContent {
+    experiences: Experience[];
+}
