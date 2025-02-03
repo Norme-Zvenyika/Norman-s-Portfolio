@@ -1,0 +1,52 @@
+{
+    "experiences": [
+      {
+        "company": "Lehigh University",
+        "position": "Software Engineering Intern",
+        "startDate": "2023-05",
+        "endDate": "",
+        "location": {
+          "city": "Bethlehem",
+          "state": "PA"
+        },
+        "responsibilities": [
+          "Developed and maintained full-stack web applications using React and Node.js",
+          "Implemented RESTful APIs for data management and integration",
+          "Collaborated with cross-functional teams to deliver software solutions",
+          "Optimized database queries and improved application performance"
+        ]
+      },
+      {
+        "company": "Lehigh University",
+        "position": "Software Engineering Intern",
+        "startDate": "2023-05",
+        "endDate": "",
+        "location": {
+          "city": "Bethlehem",
+          "state": "PA"
+        },
+        "responsibilities": [
+          "Developed and maintained full-stack web applications using React and Node.js",
+          "Implemented RESTful APIs for data management and integration",
+          "Collaborated with cross-functional teams to deliver software solutions",
+          "Optimized database queries and improved application performance"
+        ]
+      },
+      {
+        "company": "Lehigh University",
+        "position": "Teaching Assistant - Computer Science",
+        "startDate": "2022-09",
+        "endDate": "",
+        "location": {
+          "city": "Bethlehem",
+          "state": "PA"
+        },
+        "responsibilities": [
+          "Led weekly lab sessions for undergraduate programming courses",
+          "Provided one-on-one tutoring in Python and Java programming",
+          "Graded assignments and provided detailed feedback to students",
+          "Created supplementary learning materials and coding exercises"
+        ]
+      }
+    ]
+  }
