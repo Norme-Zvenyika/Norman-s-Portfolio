@@ -1,8 +1,10 @@
 import { Box, Divider } from '@mui/material'
 import {AboutSection}  from '../Sections/AboutSection'
 import ContactSection  from '../Sections/ContactSection'
+import { ExperienceSection } from '../Sections/ExperienceSection'
 import { Section } from '../../types/section'
 import aboutContent from '../../data/about.json'
+import experienceContent from '../../data/experience.json'
 import contactContent from '../../data/contact.json'
 
 interface Props {
@@ -25,6 +27,9 @@ const MainContent = ({ sections }: Props) => {
         <Box key={section.id}>
           {section.id === 'about' && (
             <AboutSection section={section} content={aboutContent} />
+          )}
+          {section.id === 'experience' && (
+            <ExperienceSection section={section} content={experienceContent} />
           )}
           {section.id === 'contact' && (
             <ContactSection section={section} content={contactContent}/>
