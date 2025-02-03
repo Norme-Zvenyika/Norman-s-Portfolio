@@ -64,3 +64,39 @@ export interface Experience {
 export interface ExperienceContent {
     experiences: Experience[];
 }
+
+// individual course interface
+export interface Course {
+    courseId: string;
+    courseTitle: string;
+    courseDescription: string;
+}
+
+// extend the existing Location interface to include country
+export interface EducationLocation extends Location {
+    country: string;
+}
+
+// single education entry interface
+export interface Education {
+    universityName: string;
+    startDate: string;
+    endDate: string;
+    conferredDate: string | null;
+    expectedDate: string | null;
+    location: EducationLocation;
+    degreeType: string;
+    major: string;
+    cumulativeGPA: number;
+    honorSocieties: string[];
+    description: string;
+    relevantCourses: Course[];
+}
+
+// main education content interface that will be used by the section
+export interface EducationContent {
+    education: Education[];
+}
+
+// helper type for education status
+export type EducationStatus = 'completed' | 'inProgress' | 'expected';
