@@ -1,0 +1,62 @@
+{
+	"education": [
+		{
+			"universityName": "University of Example State",
+			"startDate": "2019-08",
+			"endDate": "2023-05",
+			"conferredDate": null,
+			"expectedDate": "2023-05",
+			"location": {
+				"city": "Berkeley",
+				"state": "California",
+				"country": "United States"
+			},
+			"degreeType": "Bachelor of Science",
+			"major": "Computer Science",
+			"cumulativeGPA": 3.85,
+			"honorSocieties": ["Phi Beta Kappa", "Upsilon Pi Epsilon"],
+			"description": "Focused on software engineering and artificial intelligence coursework. Participated in undergraduate research in machine learning.",
+			"relevantCourses": [
+				{
+					"courseId": "CS401",
+					"courseTitle": "Advanced Algorithms",
+					"courseDescription": "Study of algorithm design techniques, complexity analysis, and fundamental algorithms in sorting, searching, and graph theory."
+				},
+				{
+					"courseId": "CS450",
+					"courseTitle": "Machine Learning",
+					"courseDescription": "Introduction to fundamental concepts in machine learning, including supervised and unsupervised learning, neural networks, and deep learning."
+				}
+			]
+		},
+		{
+			"universityName": "Community College of Excellence",
+			"startDate": "2017-08",
+			"endDate": "2019-05",
+			"conferredDate": "2019-05",
+			"expectedDate": null,
+			"location": {
+				"city": "San Francisco",
+				"state": "California",
+				"country": "United States"
+			},
+			"degreeType": "Associate of Science",
+			"major": "Computer Science",
+			"cumulativeGPA": 3.92,
+			"honorSocieties": ["Phi Theta Kappa"],
+			"description": "Completed foundational coursework in computer science and mathematics. Served as peer tutor in programming courses.",
+			"relevantCourses": [
+				{
+					"courseId": "CS201",
+					"courseTitle": "Data Structures",
+					"courseDescription": "Implementation and analysis of fundamental data structures including lists, stacks, queues, and trees."
+				},
+				{
+					"courseId": "CS210",
+					"courseTitle": "Computer Architecture",
+					"courseDescription": "Study of computer organization, assembly language programming, and processor design principles."
+				}
+			]
+		}
+	]
+}
